@@ -3,44 +3,30 @@ import java.awt.*;
 
 public class ShowWindow2 {
     public static void main(String[] args) {
-        //declare our variable
-        JLabel myLabel = new JLabel("My First Big Label!!!");
-        JLabel myLabel2 = new JLabel("My Second Big Label!");
-        JTextField myTextField = new JTextField();
-        JTextField myTextField2 = new JTextField();
+        JFrame window= new JFrame("A Simple Window");
+        JTextField myTextField1,myTextField2;
+        JLabel myLabel1,myLabel2;
 
-        //we are going to make two constants
+        myLabel1=new JLabel("My First Big Label!!!");
+        myLabel1.setBounds(50,50, 200,30);
+        myLabel1.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 16));
+        myTextField1=new JTextField();
+        myTextField1.setBounds(50,80, 200,30);
 
-        final int WINDOW_WIDTH = 300;
-        final int WINDOW_HEIGHT = 450;
+        myLabel2=new JLabel("My Second Big Label!");
+        myLabel2.setBounds(50,120, 200,30);
+        myLabel2.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 16));
+        myTextField2=new JTextField();
+        myTextField2.setBounds(50,150, 200,30);
 
-        //Create a window
-
-        JFrame window = new JFrame();
-        window.setTitle("A Simple Window");
-
-        //Setting the size of our window
-        window.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
-        //window.getContentPane().setBackground(Color.red);
-        window.setLocation(500,150);
-
-        //adding background
-        window.getContentPane().setBackground(Color.red);
-
-        //adding components
-        window.add(myLabel);
-        myLabel.setBounds(20,20,20,20);
-//
-//        window.add(myTextField);
-//        myTextField.setBounds(10,50,200,20);
-
-
-        //close the window and exit the program
-
+        window.add(myLabel1);window.add(myLabel2);
+        window.add(myTextField1); window.add(myTextField2);
+        window.setSize(400,400);
+        window.getContentPane().setBackground(Color.RED);
+        window.setLayout(null);
+        window.setLocation(500,200);
+        window.setVisible(true);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        //display the window - if we do not display the window, it will not display
-        //displaying the window is a boolean
-        window.setVisible(true);
     }
 }
