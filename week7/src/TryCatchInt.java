@@ -10,6 +10,7 @@ public class TryCatchInt {
             i = input.nextInt();
             System.out.println("Your integer is " +i);
 // If there is a problem..it will render in the catch block
+            System.out.println("The code runs correctly");
         } catch (Exception e) {
             System.out.println("We have an error " +e);
         }

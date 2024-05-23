@@ -19,6 +19,6 @@ public class OpenFile {
             JOptionPane.showMessageDialog(null,"The file was not found - this is in CATCH");
 
         }
-        JOptionPane.showMessageDialog(null,"Program has finished running - done!");
+        JOptionPane.showMessageDialog(null,"Program has finished running - done! - displayed after the catch");
     }
 }
