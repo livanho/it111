@@ -1,24 +1,24 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class dailySpecials {
     public static void main(String[] args) {
         String specials;
-
+        String[] week;
+        week = new String[]{"Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};
         Scanner input = new Scanner(System.in);
-        System.out.println("Please enter a day of week excluding weekends (Monday - Friday only!)");
-        specials = input.next();
+        do {
+            System.out.println("Please enter a day of week excluding weekends (Monday - Friday only!)");
+            specials = input.next();
+        }while(!Arrays.asList(week).contains(specials));
+
 
 
         //In the world of coffee, I need a name of a coffee beverage and a price
         String coffee;
         double price;
         double order;
-        boolean saturday = specials.equals("Saturday");
-        boolean sunday = specials.equals("Sunday");
-        if (saturday || sunday) {
-            System.out.println("Please enter a weekday, not weekend");
-            specials = input.next();
-        }
+
         switch (specials) {
             //my cases wil be the day of the week
             case "Monday":
